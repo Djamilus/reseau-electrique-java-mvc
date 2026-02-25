@@ -51,178 +51,21 @@ Le projet est structuré selon l’architecture MVC :
   - une interface graphique JavaFX.
 
 --------------------------------------------------
-3. ARBORESCENCE DU PROJET
+3. STRUCTURE LOGIQUE DU PROJET
 --------------------------------------------------
 
-.
-├── bin
-│   ├── target
-│   │   ├── classes
-│   │   │   ├── META-INF
-│   │   │   │   ├── MANIFEST.MF
-│   │   │   │   └── maven
-│   │   │   │       └── up.mi.paa
-│   │   │   │           └── reseau-electrique
-│   │   │   │               ├── pom.properties
-│   │   │   │               └── pom.xml
-│   │   │   └── up
-│   │   │       └── mi
-│   │   │           └── paa
-│   │   │               └── reseau_electrique
-│   │   │                   ├── controller
-│   │   │                   ├── model
-│   │   │                   └── view
-│   │   └── test-classes
-│   │       └── up
-│   │           └── mi
-│   │               └── paa
-│   │                   └── reseau_electrique
-│   └── up
-│       └── mi
-│           └── paa
-│               └── reseau_electrique
-│                   ├── controller
-│                   │   └── Controller.class
-│                   ├── gui
-│                   │   └── Launcher.class
-│                   ├── GuiMain.class
-│                   ├── Main.class
-│                   ├── MainTestOptimiseur.class
-│                   ├── model
-│                   │   ├── Connexion.class
-│                   │   ├── Generateur.class
-│                   │   ├── Maison.class
-│                   │   ├── Optimiseur.class
-│                   │   ├── Reseau.class
-│                   │   ├── ReseauIO.class
-│                   │   └── TypeMaison.class
-│                   └── view
-│                       ├── ReseauApp.class
-│                       ├── ReseauApp$1.class
-│                       ├── ReseauApp$2.class
-│                       ├── ReseauApp$3.class
-│                       ├── ReseauApp$4.class
-│                       ├── ReseauApp$5.class
-│                       ├── ReseauApp$6.class
-│                       ├── ReseauFrame.class
-│                       ├── ReseauFrame$1.class
-│                       └── View.class
-├── instance3.txt
-├── pom.xml
-├── README.txt
-├── README.txt.save
-├── reseau-electrique.jar
-├── src
-│   ├── main
-│   │   └── java
-│   │       └── up
-│   │           └── mi
-│   │               └── paa
-│   │                   └── reseau_electrique
-│   │                       ├── controller
-│   │                       │   └── Controller.java
-│   │                       ├── Main.java
-│   │                       ├── model
-│   │                       │   ├── Connexion.java
-│   │                       │   ├── Generateur.java
-│   │                       │   ├── Maison.java
-│   │                       │   ├── Optimiseur.java
-│   │                       │   ├── Reseau.java
-│   │                       │   ├── ReseauIO.java
-│   │                       │   └── TypeMaison.java
-│   │                       └── view
-│   │                           ├── ReseauApp.java
-│   │                           └── View.java
-│   └── test
-│       └── java
-│           └── up
-│               └── mi
-│                   └── paa
-│                       └── reseau_electrique
-│                           ├── controller
-│                           │   └── ControllerTest.java
-│                           └── model
-│                               ├── ConnexionTest.java
-│                               ├── GenerateurTest.java
-│                               ├── MaisonTest.java
-│                               ├── OptimiseurTest.java
-│                               ├── ReseauIOTest.java
-│                               ├── ReseauTest.java
-│                               └── TypeMaisonTest.java
-└── target
-    ├── classes
-    │   └── up
-    │       └── mi
-    │           └── paa
-    │               └── reseau_electrique
-    │                   ├── controller
-    │                   │   └── Controller.class
-    │                   ├── Main.class
-    │                   ├── model
-    │                   │   ├── Connexion.class
-    │                   │   ├── Generateur.class
-    │                   │   ├── Maison.class
-    │                   │   ├── Optimiseur.class
-    │                   │   ├── Reseau.class
-    │                   │   ├── ReseauIO.class
-    │                   │   └── TypeMaison.class
-    │                   └── view
-    │                       ├── ReseauApp.class
-    │                       ├── ReseauApp$1.class
-    │                       ├── ReseauApp$2.class
-    │                       ├── ReseauApp$3.class
-    │                       ├── ReseauApp$4.class
-    │                       ├── ReseauApp$5.class
-    │                       ├── ReseauApp$6.class
-    │                       └── View.class
-    ├── generated-sources
-    │   └── annotations
-    ├── generated-test-sources
-    │   └── test-annotations
-    ├── maven-status
-    │   └── maven-compiler-plugin
-    │       ├── compile
-    │       │   └── default-compile
-    │       │       ├── createdFiles.lst
-    │       │       └── inputFiles.lst
-    │       └── testCompile
-    │           └── default-testCompile
-    │               ├── createdFiles.lst
-    │               └── inputFiles.lst
-    ├── surefire-reports
-    │   ├── TEST-up.mi.paa.reseau_electrique.controller.ControllerTest.xml
-    │   ├── TEST-up.mi.paa.reseau_electrique.model.ConnexionTest.xml
-    │   ├── TEST-up.mi.paa.reseau_electrique.model.GenerateurTest.xml
-    │   ├── TEST-up.mi.paa.reseau_electrique.model.MaisonTest.xml
-    │   ├── TEST-up.mi.paa.reseau_electrique.model.OptimiseurTest.xml
-    │   ├── TEST-up.mi.paa.reseau_electrique.model.ReseauIOTest.xml
-    │   ├── TEST-up.mi.paa.reseau_electrique.model.ReseauTest.xml
-    │   ├── TEST-up.mi.paa.reseau_electrique.model.TypeMaisonTest.xml
-    │   ├── up.mi.paa.reseau_electrique.controller.ControllerTest.txt
-    │   ├── up.mi.paa.reseau_electrique.model.ConnexionTest.txt
-    │   ├── up.mi.paa.reseau_electrique.model.GenerateurTest.txt
-    │   ├── up.mi.paa.reseau_electrique.model.MaisonTest.txt
-    │   ├── up.mi.paa.reseau_electrique.model.OptimiseurTest.txt
-    │   ├── up.mi.paa.reseau_electrique.model.ReseauIOTest.txt
-    │   ├── up.mi.paa.reseau_electrique.model.ReseauTest.txt
-    │   └── up.mi.paa.reseau_electrique.model.TypeMaisonTest.txt
-    └── test-classes
-        └── up
-            └── mi
-                └── paa
-                    └── reseau_electrique
-                        ├── controller
-                        │   └── ControllerTest.class
-                        └── model
-                            ├── ConnexionTest.class
-                            ├── GenerateurTest.class
-                            ├── MaisonTest.class
-                            ├── OptimiseurTest.class
-                            ├── ReseauIOTest.class
-                            ├── ReseauTest.class
-                            └── TypeMaisonTest.class
+src/
+ ├── main/
+ │   └── java/up/mi/paa/reseau_electrique/
+ │        ├── controller/
+ │        ├── model/
+ │        └── view/
+ └── test/
+     └── java/up/mi/paa/reseau_electrique/
 
-73 directories, 94 files
+pom.xml
+instance3.txt
+reseau-electrique.jar
 
 --------------------------------------------------
 4. TYPES DE MAISONS
@@ -270,25 +113,11 @@ Règle d’acceptation :
 - Si le coût augmente, la modification peut être acceptée avec une
   probabilité dépendant de la température (fonction exponentielle).
 
-Ce mécanisme permet :
-- d’explorer l’espace des solutions,
-- d’éviter de rester bloqué dans des minima locaux,
-- de converger vers une solution de coût plus faible.
-
-La température décroît progressivement au fil des itérations
-(refroidissement), ce qui réduit la probabilité d’accepter des solutions
-moins bonnes à la fin de l’algorithme.
-
-L’algorithme garantit :
-- la validité permanente du réseau,
-- qu’aucune maison n’est supprimée,
-- que chaque maison reste connectée à un unique générateur.
+La température décroît progressivement au fil des itérations.
 
 --------------------------------------------------
 7. EXÉCUTION DU PROGRAMME
 --------------------------------------------------
-
-Le projet est fourni sous forme de JAR exécutable.
 
 Prérequis :
 - Java 17 ou supérieur installé
@@ -300,18 +129,12 @@ Depuis la racine du projet, exécuter :
 java -jar reseau-electrique-1.0-SNAPSHOT.jar instance1.txt 30
 
 Un menu principal unique s’affiche alors :
-
 1 - Interface graphique (JavaFX)
 2 - Interface textuelle
-
-L’utilisateur choisit le mode souhaité.
 
 --------------------------------------------------
 8. EXÉCUTION AVEC INTERFACE GRAPHIQUE (JavaFX)
 --------------------------------------------------
-
-Si JavaFX n’est pas inclus dans l’environnement Java, il est nécessaire
-de fournir explicitement le chemin vers le JavaFX SDK.
 
 Commande générale :
 
@@ -331,10 +154,6 @@ L’interface console permet :
 - le calcul du coût,
 - l’optimisation automatique,
 - la sauvegarde de la solution.
-
-Elle ne nécessite aucune dépendance graphique et fonctionne sur toutes
-les plateformes (macOS, Linux, Windows).
-
 
 --------------------------------------------------
 10. FORMAT DES FICHIERS (PARTIE 2)
@@ -359,13 +178,10 @@ Contraintes :
 11. TESTS
 --------------------------------------------------
 
-Le projet inclut une suite de tests unitaires JUnit couvrant :
-- le modèle,
-- le contrôleur,
-- le parsing des fichiers,
-- l’algorithme d’optimisation.
+Le projet inclut une suite de tests unitaires JUnit.
 
-Les tests permettent de vérifier la robustesse et la cohérence du programme.
+Si Maven est installé, exécuter :
+mvn test
 
 --------------------------------------------------
 12. AUTEURS
@@ -375,9 +191,4 @@ Projet réalisé par :
 - Djamila Khoulalene
 - Yanis Hammaoui
 
-Dans le cadre du cours de Programmation Avancée et Applications (PAA).
-
 ==================================================
-
-
-
